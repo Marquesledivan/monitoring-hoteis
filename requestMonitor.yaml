@@ -1,0 +1,14 @@
+requestname: 
+influx
+curl:
+curl 'https://972-gdu-533.mktoresp.com/webevents/visitWebPage?_mchNc=1612656500546&_mchCn=&_mchId=972-GDU-533&_mchTk=_mch-influxdata.com-1612654047287-52435&_mchHo=docs.influxdata.com&_mchPo=&_mchRu=%2Finfluxdb%2Fv1.8%2Fquery_language%2Fexplore-schema%2F&_mchPc=https%3A&_mchVr=159&_mchEcid=&_mchHa=&_mchRe=https%3A%2F%2Fwww.google.com%2F&_mchQp=' \
+  -H 'Connection: keep-alive' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36' \
+  -H 'Accept: */*' \
+  -H 'Origin: https://docs.influxdata.com' \
+  -H 'Sec-Fetch-Site: cross-site' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: https://docs.influxdata.com/' \
+  -H 'Accept-Language: pt-BR,pt;q=0.9' \
+  --compressed
