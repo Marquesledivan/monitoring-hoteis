@@ -1,11 +1,11 @@
 node('ti') {
     try {
         def PROJECT = "monitoring-hoteis"
-        def REPO_GIT = "git@git.cvc.com.br:Desenvolvimento-MS/monitoring-hoteis.git"
+        def REPO_GIT = "git"
         def BRANCH_NAME = "master"
         def IMAGE_VERSION = "$BUILD_NUMBER"
 
-        def ECR_URL = "260584439167.dkr.ecr.sa-east-1.amazonaws.com/monitoringhotel"
+        def ECR_URL = " "
 
         def CRONJOB_NAME = "$PROJECT-cronjob"
         def CRONJOB_FILE = "$PROJECT-cronjob.yaml"
@@ -23,7 +23,7 @@ node('ti') {
                 checkout([$class: 'GitSCM',
                     userRemoteConfigs: [[url: "$REPO_GIT"]],
                     branches: [[name: "$BRANCH_NAME"]],
-                    credentialsId: 'f2504523-0111-41a4-a9be-f7d2b40163af',
+                    credentialsId: '',
                     clean: false,
                     extensions: [[$class: 'SubmoduleOption',
                                     disableSubmodules: false,
@@ -83,9 +83,9 @@ node('ti') {
 }
 
 def notifyBuild(String message, String buildStatus = 'STARTED') {
-    def SLACK_URL = "https://hooks.slack.com/services/T053BAYF0/B9QPPCQ1W/"
-    def SLACK_TOKEN = "fdSuw1oDnflQi5hXPezfELK9"
-    def SLACK_CHANNEL = "#monitoring-hoteis"
+    def SLACK_URL = ""
+    def SLACK_TOKEN = ""
+    def SLACK_CHANNEL = ""
 
     buildStatus = buildStatus ?: 'SUCCESSFUL'
     def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
